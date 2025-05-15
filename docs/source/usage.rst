@@ -68,7 +68,7 @@ By default, no prefixes are defined. The standard prefixes for ``rdf``, ``rdfs``
 
     ontology = pyhornedowl.open_ontology("path/to/ontology.owl")
 
-    ontology.add_default_prefix_names()
+    ontology.prefix_mapping.add_default_prefix_names()
     ontology.add_prefix_mapping("ex", "https://example.com/")
 
 
