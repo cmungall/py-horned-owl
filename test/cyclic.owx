@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     ontologyIRI="http://example.com/cycle">
+    <Declaration><Class IRI="http://example.com/A"/></Declaration>
+    <Declaration><Class IRI="http://example.com/B"/></Declaration>
+    <Declaration><Class IRI="http://example.com/C"/></Declaration>
+    <!-- A subClassOf B, B subClassOf C, C subClassOf A  => a cycle -->
+    <SubClassOf><Class IRI="http://example.com/A"/><Class IRI="http://example.com/B"/></SubClassOf>
+    <SubClassOf><Class IRI="http://example.com/B"/><Class IRI="http://example.com/C"/></SubClassOf>
+    <SubClassOf><Class IRI="http://example.com/C"/><Class IRI="http://example.com/A"/></SubClassOf>
+</Ontology>
